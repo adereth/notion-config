@@ -2,7 +2,8 @@
 -- Notion default settings
 --
 
-dopath("cfg_notioncore")
+dopath("cfg_keyboard")
+dopath("cfg_mouse")
 dopath("cfg_menuitems")
 dopath("cfg_kludges")
 dopath("cfg_layouts")
