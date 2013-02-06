@@ -12,7 +12,7 @@ META="Mod4+"
 if os and os.execute("test -x /usr/bin/urxvt") == 0 then
     XTERM="/usr/bin/urxvt -sk -sr -si -sl 5000 -scrollstyle plain -urgentOnBell"
 else
-    XTERM="xterm"
+    XTERM="/usr/bin/xterm"
 end
 
 -- Some basic settings
