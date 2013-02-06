@@ -8,10 +8,10 @@ de.defstyle("*", {
     background_colour = "#505050",
     foreground_colour = "#ffffff",
     padding_pixels = 1,
-    highlight_pixels = 2,
-    shadow_pixels = 2,
+    highlight_pixels = 1,
+    shadow_pixels = 1,
     border_style = "elevated",
-    font = "-*-helvetica-medium-r-normal-*-12-*-*-*-*-*-*-*",
+    font = "-*-helvetica-medium-r-normal-*-10-*-*-*-*-*-*-*",
     text_align = "center",
 })
 

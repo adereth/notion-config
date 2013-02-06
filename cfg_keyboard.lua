@@ -85,7 +85,7 @@ defbindings("WMPlex.toplevel", {
     kpress(META.."T", "WRegion.set_tagged(_sub, 'toggle')", "_sub:non-nil"),
 
     bdoc("Run a terminal emulator."),
-    kpress(META.."X", "notioncore.exec_on(_, XTERM or 'x-terminal-emulator')"),
+    kpress(META.."X", "ioncore.exec_on(_, XTERM or 'x-terminal-emulator')"),
     
     bdoc("Query for command line to execute."),
     kpress(META.."R", "ioncore.exec_on(_, 'gmrun')"), -- "mod_query.query_exec(_)" for default executor

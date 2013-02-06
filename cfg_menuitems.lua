@@ -6,9 +6,9 @@
 -- Main menu
 defmenu("mainmenu", {
     menuentry("Run...",         "mod_query.query_exec(_)"),
-    menuentry("Terminal",       "notioncore.exec_on(_, XTERM or 'x-terminal-emulator')"),
+    menuentry("Terminal",       "ioncore.exec_on(_, XTERM or 'x-terminal-emulator')"),
     menuentry("Lock screen",
-              "notioncore.exec_on(_, notioncore.lookup_script('notion-lock'))"),
+              "ioncore.exec_on(_, ioncore.lookup_script('notion-lock'))"),
     menuentry("Help",           "mod_query.query_man(_)"),
     menuentry("About Notion",      "mod_query.show_about_ion(_)"),
     submenu("Styles",           "stylemenu"),
@@ -61,7 +61,7 @@ defctxmenu("WClientWin", "Client window", {
 
 -- Auto-generated Debian menu definitions
 if os and os.execute("test -x /usr/bin/update-menus") == 0 then
-    if notioncore.is_i18n() then
+    if ioncore.is_i18n() then
         dopath("debian-menu-i18n")
     else
         dopath("debian-menu")
