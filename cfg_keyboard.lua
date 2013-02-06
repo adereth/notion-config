@@ -79,6 +79,13 @@ defbindings("WMPlex", {
     kpress_wait(META.."W", "WRegion.rqclose_propagate(_, _sub)"),
 })
 
+-- if os and os.execute("test -x /usr/bin/gmrun") == 0 then
+--     XTERM="urxvt -sk -sr -si -sl 5000 -scrollstyle plain -urgentOnBell"
+-- else
+--     XTERM="xterm"
+-- end
+
+
 -- Frames for transient windows ignore this bindmap
 defbindings("WMPlex.toplevel", {
     bdoc("Toggle tag of current object."),
@@ -88,7 +95,7 @@ defbindings("WMPlex.toplevel", {
     kpress(META.."X", "ioncore.exec_on(_, XTERM or 'x-terminal-emulator')"),
     
     bdoc("Query for command line to execute."),
-    kpress(META.."R", "ioncore.exec_on(_, 'gmrun')"), -- "mod_query.query_exec(_)" for default executor
+    kpress(META.."R", LAUNCHER),
 
     bdoc("Query for Lua code to execute."),
     kpress(META.."F3", "mod_query.query_lua(_)"),
@@ -111,7 +118,6 @@ defbindings("WMPlex.toplevel", {
     kpress(META.."D", "ioncore.detach(_chld, 'toggle')", "_chld:non-nil"),
     
 })
-
 
 -- WFrame context bindings
 --

@@ -15,6 +15,13 @@ else
     XTERM="/usr/bin/xterm"
 end
 
+-- Program launcher
+if os and os.execute("test -x /usr/bin/gmrun") == 0 then
+    LAUNCHER="ioncore.exec_on(_, '/usr/bin/gmrun')"
+else
+    LAUNCHER="mod_query.query_exec(_)"
+end
+
 -- Some basic settings
 ioncore.set{
     -- Maximum delay between clicks in milliseconds to be considered a
@@ -40,4 +47,3 @@ ioncore.set{
 }
 
 dopath("cfg_defaults")
-
