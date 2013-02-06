@@ -9,7 +9,11 @@ META="Mod4+"
 --ALTMETA=""
 
 -- Terminal emulator
-XTERM="urxvt -sk -sr -si -sl 5000 -scrollstyle plain -urgentOnBell"
+if os and os.execute("test -x /usr/bin/urxvt") == 0 then
+    XTERM="urxvt -sk -sr -si -sl 5000 -scrollstyle plain -urgentOnBell"
+else
+    XTERM="xterm"
+end
 
 -- Some basic settings
 ioncore.set{
