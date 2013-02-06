@@ -5,7 +5,6 @@
 -- The rest of the settings are in cfg_notioncore.lua and individual modules'
 -- configuration files (cfg_modulename.lua). 
 
-dopath("cfg_debian")
 META="Mod4+"
 --ALTMETA=""
 
