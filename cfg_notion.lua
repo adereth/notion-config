@@ -10,7 +10,7 @@ META="Mod4+"
 
 -- Terminal emulator
 if os and os.execute("test -x /usr/bin/urxvt") == 0 then
-    XTERM="urxvt -sk -sr -si -sl 5000 -scrollstyle plain -urgentOnBell"
+    XTERM="/usr/bin/urxvt -sk -sr -si -sl 5000 -scrollstyle plain -urgentOnBell"
 else
     XTERM="xterm"
 end
