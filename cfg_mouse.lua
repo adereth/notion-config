@@ -20,7 +20,6 @@ defbindings("WFrame", {
 
     bdoc("Switch the frame to display the object indicated by the tab."),
     mclick("Button1@tab", "WFrame.p_switch_tab(_)"),
-    mclick("Button2@tab", "WFrame.p_switch_tab(_)"),
     
     bdoc("Resize the frame."),
     mdrag("Button1@border", "WFrame.p_resize(_)"),
@@ -32,7 +31,14 @@ defbindings("WFrame", {
     bdoc("Move objects between frames by dragging and dropping the tab."),
     mdrag("Button1@tab", "WFrame.p_tabdrag(_)"),
     mdrag("Button2@tab", "WFrame.p_tabdrag(_)"),
-           
+
+    bdoc("Close the application or destroy the empty frame."),
+    mclick("Button2@tab", "WRegion.rqclose_propagate(_, _sub)"),
+
+    bdoc("Cycle through tabs using the mousewheel."),
+    mpress("Button5@tab", "WScreen.switch_next(_)"),
+    mpress("Button4@tab", "WScreen.switch_prev(_)"),
+
 })
 
 
