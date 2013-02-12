@@ -47,3 +47,4 @@ ioncore.set{
 }
 
 dopath("cfg_defaults")
+dopath("look-bluesteel")
